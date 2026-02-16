@@ -1,0 +1,45 @@
+title = "NepalSewa Gitleaks Configuration"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "nepalsewa-api-key"
+description = "NepalSewa API Key"
+regex = '''(?i)(sk_live_[a-zA-Z0-9]{50,})'''
+tags = ["api-key", "secret"]
+
+[[rules]]
+id = "aws-access-key"
+description = "AWS Access Key"
+regex = '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}'''
+tags = ["aws", "secret"]
+
+[[rules]]
+id = "jwt-secret"
+description = "JWT Secret Key"
+regex = '''(?i)(jwt_secret|jwt_key)[\s]*=[\s]*["\']([a-zA-Z0-9_\-]{20,})["\']'''
+tags = ["jwt", "secret"]
+
+[[rules]]
+id = "database-password"
+description = "Database Password"
+regex = '''(?i)(db_password|database_password|mysql_password)[\s]*=[\s]*["\']([^\s"\']+)["\']'''
+tags = ["database", "password"]
+
+[[rules]]
+id = "private-key"
+description = "Private Key"
+regex = '''-----BEGIN (RSA |EC |DSA |PGP )?PRIVATE KEY-----'''
+tags = ["private-key", "secret"]
+
+[allowlist]
+description = "Allowlist for false positives"
+regexes = [
+  '''EXAMPLE''',
+  '''example\.com''',
+]
+paths = [
+  '''README\.md''',
+  '''\.github/workflows/''',
+]

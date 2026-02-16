@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NepalSewa - Digital Wallet for Nepal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🇳🇵 NepalSewa</h1>
+            </div>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#security">Security</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Digital Payments Made Simple</h2>
+                <p>Send, receive, and manage money securely across Nepal</p>
+                <button class="btn-primary" onclick="showLogin()">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Why Choose NepalSewa?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">💸</div>
+                    <h3>Instant Transfers</h3>
+                    <p>Send money to anyone in Nepal instantly with zero fees</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3>Secure Payments</h3>
+                    <p>Bank-grade encryption protects your transactions</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📱</div>
+                    <h3>Mobile First</h3>
+                    <p>Manage your wallet from anywhere, anytime</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🏦</div>
+                    <h3>NRB Compliant</h3>
+                    <p>Fully regulated by Nepal Rastra Bank</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Research Section -->
+    <section class="security" id="security">
+        <div class="container">
+            <h2>Security Research Project</h2>
+            <div class="project-info">
+                <h3>Automating Regulatory Compliance in Nepal's Fintech Sector</h3>
+                <p class="subtitle">An Artificial Intelligence-Driven DevSecOps Framework for Policy-as-Code Enforcement of Nepal Rastra Bank Guidelines in Kathmandu Valley</p>
+                
+                <div class="project-details">
+                    <div class="detail-card">
+                        <h4>🎯 Objective</h4>
+                        <p>Develop an automated compliance framework that ensures fintech applications adhere to Nepal Rastra Bank (NRB) regulations through DevSecOps practices and AI-driven policy enforcement.</p>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <h4>🔧 Technologies Used</h4>
+                        <ul>
+                            <li><strong>Gitleaks:</strong> Secret detection and prevention</li>
+                            <li><strong>Semgrep:</strong> Code security pattern analysis</li>
+                            <li><strong>Checkov:</strong> Infrastructure as Code scanning</li>
+                            <li><strong>Trivy:</strong> Vulnerability scanning</li>
+                            <li><strong>GitHub Actions:</strong> CI/CD automation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <h4>📊 Key Features</h4>
+                        <ul>
+                            <li>Automated security scanning in CI/CD pipeline</li>
+                            <li>Real-time vulnerability detection</li>
+                            <li>Automated remediation with auto-fix capabilities</li>
+                            <li>Compliance reporting for NRB guidelines</li>
+                            <li>Policy-as-Code implementation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Dashboard Section -->
+    <section class="dashboard" id="about">
+        <div class="container">
+            <h2>Quick Demo</h2>
+            <div class="demo-login">
+                <h3>Login to NepalSewa</h3>
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="username">Phone Number</label>
+                        <input type="text" id="username" placeholder="98XXXXXXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Login</button>
+                </form>
+                <div id="message" class="message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 NepalSewa Digital Wallet. Licensed by Nepal Rastra Bank.</p>
+            <p>Research Project: DevSecOps Compliance Automation Framework</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
