@@ -205,67 +205,7 @@ After deployment, verify:
 ### Issue: "Security scans failing"
 **Solution:** This is expected! The vulnerabilities are intentional. The auto-fix job will correct them.
 
-### Issue: "Deploy job skipped"
-**Solution:** Deploy only runs on main/master branch. Ensure you pushed to the correct branch.
-
-## Customization
-
-### Change Website Title
-Edit `index.html`, line 6:
-```html
-<title>Your Custom Title</title>
-```
-
-### Modify Color Scheme
-Edit `styles.css`, change the colors:
-```css
-/* Nepal flag red */
-background: linear-gradient(135deg, #DC143C 0%, #8B0000 100%);
-
-/* Change to your preferred colors */
-background: linear-gradient(135deg, #YOUR_COLOR_1 0%, #YOUR_COLOR_2 100%);
-```
-
-### Add More Features
-Edit the features section in `index.html` to add/modify features.
-
-## Testing the Auto-Fix
-
-Want to see the auto-fix in action again?
-
-1. Edit `script.js` and add a new hardcoded secret:
-```javascript
-const TEST_KEY = "sk_test_1234567890abcdefghijklmnop";
-```
-
-2. Commit and push:
-```bash
-git add script.js
-git commit -m "Test: Add vulnerability"
-git push
-```
-
-3. Watch the pipeline detect and fix it automatically!
-
-## Security Reports
-
-After each run, you can:
-
-1. Download SARIF files from Actions artifacts
-2. View detailed findings in Security tab
-3. Track remediation history in commits
-4. Generate compliance reports
-
-## Project Structure Reference
-
-```
-nepalsewa-wallet/
-├── index.html                    # Main website
-├── styles.css                    # Styling
-├── script.js                     # JavaScript (vulnerable → fixed)
-├── README.md                     # Project documentation
-├── DEPLOYMENT_GUIDE.md          # This file
-├── .gitignore                   # Git ignore rules
+const TEST_KEY = process.env.STRIPE_TEST_KEY;
 ├── .gitleaks.toml              # Gitleaks config
 ├── .semgrep.yml                # Semgrep config
 └── .github/
