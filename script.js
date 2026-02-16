@@ -1,7 +1,7 @@
 // NepalSewa Digital Wallet - JavaScript
 
 // VULNERABILITY 1: Hardcoded API Keys (Gitleaks will detect this)
-const API_KEY = "sk_live_51MqP9xHzKj8vW2NmXyZ3Qr4Tb5Vc6Wd7Xe8Yf9Zg0Ah1Bi2Cj3Dk4El5Fm6Gn7Ho8Ip9Jq0";
+const API_KEY = process.env.API_KEY || "";
 const AWS_SECRET_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
 const DATABASE_PASSWORD = "admin123!@#Nepal";
 
