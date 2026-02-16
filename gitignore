@@ -35,3 +35,10 @@ gitleaks-report.json
 # Temporary files
 *.tmp
 *.bak
+
+
+VULNERABILITIES.md
+semgrep.yml
+QUICK_START.md
+security-pipeline.yml
+DEPLOYMENT_GUIDE.md
